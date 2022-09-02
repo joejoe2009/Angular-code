@@ -11,5 +11,9 @@
 }
 
 p {
-    color: blue;
+    color: black;
+}
+
+.odd {
+    color: red;
 }
