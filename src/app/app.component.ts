@@ -1,9 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { AccountsService } from './accounts.service';
+import { UserService } from './users.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  providers: [UserService]
   // styles:[`
   // h3{
   //   color: dodgerblue;
@@ -11,7 +14,7 @@ import { Component } from '@angular/core';
   
   // `]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   // username = '';
   // showSecret = false;
   // log = [];
@@ -59,9 +62,28 @@ export class AppComponent {
   // }
 
   // numbers = [1, 2, 3, 4, 5];
-  oddNumbers = [1, 3, 5];
-  evenNumbers = [2, 4];
-  onlyOdd = false;
-  value = 5;
+  // oddNumbers = [1, 3, 5];
+  // evenNumbers = [2, 4];
+  // onlyOdd = false;
+  // value = 5;
+
+  // onAccountAdded(newAccount:{name: string, status: string}) {
+  //   this.accounts.push(newAccount);
+  // }
+
+  // onStatusChanged(updateInfo:{id: number, newStatus: string}) {
+  //   this.accounts[updateInfo.id].status = updateInfo.newStatus;
+  // }
+
+  // accounts: {name: string, status: string}[] = [];
+
+  // constructor(private accountsService: AccountsService) {}
+
+  // activeUsers = ['Max', 'Anna'];
+  // inactiveUsers = ['Chris', 'Manu'];
+
+  ngOnInit() {
+    // this.accounts = this.accountsService.accounts;
+  }
 
 }
